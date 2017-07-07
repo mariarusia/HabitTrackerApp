@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the activity drop-down Spinner -->
+    <string-array name="array_activity_options">
+        <item>@string/activity_unknown</item>
+        <item>@string/activity_walking</item>
+        <item>@string/activity_jogging</item>
+        <item>@string/activity_swimming</item>
+    </string-array>
+
+    <!-- These are the options displayed in the headache drop-down Spinner -->
+    <string-array name="array_headache_options">
+        <item>@string/no</item>
+        <item>@string/yes</item>
+    </string-array>
+
+</resources>

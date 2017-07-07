@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for the editor -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_margin"
+        tools:context=".EditorActivity">
+
+        <!-- Physical Activity category about sleep and steps-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_physical" />
+
+            <!-- Input fields -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="4dp">
+
+                <!-- Steps field -->
+                <EditText
+                    android:id="@+id/edit_number_steps"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/number_of_steps"
+                    android:inputType="textCapWords" />
+
+                <!-- Sleep field -->
+                <EditText
+                    android:id="@+id/edit_hours_of_sleep"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/hours_of_sleep"
+                    android:inputType="textCapWords" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Activity category -->
+        <LinearLayout
+            android:id="@+id/container_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_physical_activity" />
+
+            <!-- Input field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <!-- Activities -->
+                <Spinner
+                    android:id="@+id/spinner_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingRight="16dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Headache category -->
+        <LinearLayout
+            android:id="@+id/container_headache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_headache" />
+
+            <!-- Input field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <!-- Headaches -->
+                <Spinner
+                    android:id="@+id/spinner_headache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingRight="16dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- New info category -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_information" />
+            <!-- Info field -->
+            <EditText
+                android:id="@+id/edit_new_information"
+                style="@style/EditorFieldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/new_information_learnt"
+                android:inputType="text"
+                android:paddingLeft="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

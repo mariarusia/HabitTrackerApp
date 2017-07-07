@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HabitTrackerApp</string>
+    <string name="action_insert_data">Insert data</string>
+    <string name="category_physical">Physical Activity</string>
+    <string name="number_of_steps">Number of steps per day</string>
+    <string name="hours_of_sleep">How many hours of sleep</string>
+    <string name="category_headache">Any headache?</string>
+    <string name="category_physical_activity">Any physical activity?</string>
+    <string name="action_save">Save</string>
+
+    <string name="activity_unknown">No physical activity</string>
+    <string name="activity_walking">Walking</string>
+    <string name="activity_jogging">Jogging</string>
+    <string name="activity_swimming">Swimming</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="category_information">New information</string>
+    <string name="new_information_learnt">New information learnt</string>
+</resources>

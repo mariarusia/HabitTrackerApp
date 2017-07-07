@@ -56,18 +56,9 @@ public class MainActivity extends AppCompatActivity {
         displayDatabaseInfo();
     }
 
-    /**
-     * Helper method to display information in the onscreen TextView about the state of
-     * the habits database. And create a cursor, so that the project met requirements
-     */
-
-    private void displayDatabaseInfo() {
-        // To access our database, we instantiate our subclass of SQLiteOpenHelper
-        // and pass the context, which is the current activity.
-        HabitTrackerHelper mDbHelper = new HabitTrackerHelper(this);
-
-        // Create and/or open a database to read from it
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+    //reads data from the data base
+    // input - database, return Cursor object
+    private Cursor read(SQLiteDatabase db){
 
         // Perform this raw SQL query "SELECT * FROM habits"
         // to get a Cursor that contains all rows from the habits table.
@@ -82,7 +73,25 @@ public class MainActivity extends AppCompatActivity {
 
         Cursor cursor = db.query(TABLE_NAME, projection, null, null, null, null, null);
 
+        return cursor;
+    }
+    /**
+     * Helper method to display information in the onscreen TextView about the state of
+     * the habits database. And create a cursor, so that the project met requirements
+     */
+
+    private void displayDatabaseInfo() {
+        // To access our database, we instantiate our subclass of SQLiteOpenHelper
+        // and pass the context, which is the current activity.
+        HabitTrackerHelper mDbHelper = new HabitTrackerHelper(this);
+
+        // Create and/or open a database to read from it
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+
+
         TextView displayView = (TextView) findViewById(R.id.textview);
+
+        Cursor cursor = read(db);
 
         try {
             // Create a header in the Text View that looks like this:
